@@ -1,0 +1,86 @@
+//structure
+@import 'structure/variables';
+@import 'structure/mixins';
+// @import 'structure/grid';
+@import 'structure/normalize';
+@import 'structure/typography';
+
+// inc
+@import 'inc/demo';
+@import 'inc/component';
+@import 'inc/cs-select';
+@import 'inc/cs-skin-boxes';
+
+
+//theme
+@import 'theme/main';
+
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+	@if $custom-font-family {
+		font: $font-weight #{$font-size}%/#{$line-height} $custom-font-family, $font-family;
+	} @else {
+		font: $font-weight #{$font-size}%/#{$line-height} $font-family;
+	}
+}
+
+body {
+	// Ala Trent Walton
+	color: #000;
+}
+
+a {
+	text-decoration:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'ralewaymedium';
+}
+
+
+/* ========= Helperclass =========== */	
+
+
+%center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+%horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

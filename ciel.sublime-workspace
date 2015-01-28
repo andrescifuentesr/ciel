@@ -1,0 +1,307 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 109,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/ciel"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/ciel/tasks/options/concat.js",
+		"/Applications/MAMP/htdocs/ciel/js/main.js",
+		"/Applications/MAMP/htdocs/ciel/js/plugins.js",
+		"/Applications/MAMP/htdocs/ciel/README.md",
+		"/Applications/MAMP/htdocs/linguanow/linguanow.sublime-project",
+		"/Applications/MAMP/htdocs/linguanow/wp-config-alive.php",
+		"/Users/octaviocifuentes/Downloads/FullscreenForm/js/fullscreenForm.js",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/template-equipe.php",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/template-home.php",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/css/scss/style.scss",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/css/scss/theme/_langue.scss",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/css/scss/theme/_home.scss",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/css/scss/theme/_page.scss",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/header.php",
+		"/Applications/MAMP/htdocs/officina/officina.sublime-project",
+		"/Applications/MAMP/htdocs/officina/wp-content/themes/officina/css/scss/animations/_animation_ballon.scss",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/functions.php",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/inc/template-functions.php",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/scss/theme/_publication.scss",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/scss/theme/_single.scss",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/js/main.js",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/inc/template-instant-gallery.php",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/content-single.php",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/header.php",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/scss/structure/_mixins.scss",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/fonts/dosis-regular-webfont.eot",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/plugins/instant-gallery/instant-gallery.css",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/scss/inc/_instant-gallery.scss",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/plugins/instant-gallery/instant-gallery.php",
+		"/Users/octaviocifuentes/Downloads/team.sql",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/node_modules/grunt-autoprefixer/package.json",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/Gruntfile.js",
+		"/Applications/MAMP/htdocs/galerie_flak_2/wp-content/themes/galerie_flak_2/css/style.css",
+		"/Applications/MAMP/htdocs/galerie_flak_2/galerie-flak.sublime-project",
+		"/Users/octaviocifuentes/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/octaviocifuentes/Library/Application Support/Sublime Text 3/Packages/User/Gist.sublime-settings",
+		"/Users/octaviocifuentes/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
+		"/Users/octaviocifuentes/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/l-a-p/.htaccess",
+		"/Applications/MAMP/htdocs/l-a-p/archivos/bdd/12-24-2014/lapbdd2-local.sql",
+		"/Applications/MAMP/htdocs/l-a-p/wp-config.php",
+		"/Applications/MAMP/htdocs/l-a-p/wp-config_live.php",
+		"/Applications/MAMP/htdocs/team/wp-content/themes/team/inc/template-functions-theme.php",
+		"/Applications/MAMP/htdocs/team/wp-content/themes/team/inc/template-news.php",
+		"/Applications/MAMP/htdocs/team/_archives/bdd/24-12-2014/team-local.sql",
+		"/Applications/MAMP/htdocs/nsi/wp-config.php",
+		"/Applications/MAMP/htdocs/team/wp-config.php",
+		"/Applications/MAMP/htdocs/naturesintent/wp-config.php",
+		"/Applications/MAMP/htdocs/marcelabarrios/wp-config.php",
+		"/Applications/MAMP/htdocs/linguanow/wp-config.php",
+		"/Applications/MAMP/htdocs/Food2Vous/12eme/wp-config.php",
+		"/Applications/MAMP/htdocs/Food2Vous/loulou/wp-config.php",
+		"/Applications/MAMP/htdocs/Food2Vous/georgette/wp-config.php",
+		"/Applications/MAMP/htdocs/Food2Vous/eden/wp-config.php",
+		"/Applications/MAMP/htdocs/Food2Vous/eden/index.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sass",
+			"the_content",
+			"content",
+			".'');\n",
+			"test",
+			"the",
+			"ig-thumbs",
+			".css",
+			"node",
+			"html5",
+			"shortcode",
+			"gist",
+			".js",
+			"localhost/l-a-p",
+			"http://localhost/l-a-p",
+			"http://localhost/l-a-p/",
+			"http://localhost:8888",
+			"http://localhost:8888/",
+			"local",
+			"http://l-a-p.co",
+			"local",
+			"http://l-a-p.co",
+			"entry-content",
+			"http://www.team-mundus.eu",
+			"team-mu",
+			"local",
+			"port",
+			"root"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http://localhost:8888/l-a-p",
+			"http://localhost/l-a-p",
+			"http://localhost:8888/team"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								109,
+								109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "ciel.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
