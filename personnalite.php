@@ -51,6 +51,9 @@
 				$reponse3 = "";
 				$reponse4 = "";
 				$reponse5 = "";
+				$personaliteA = "";
+				$personaliteB = "";
+				$personaliteC = "";
 
 				if ($answer1 == "A") { $totalA = $totalA + 1.2; $reponse1 = "Un geek"; }
 				if ($answer1 == "B") { $totalB = $totalB + 1.2; $reponse1 = "Un technicien"; }
@@ -73,13 +76,16 @@
 				if ($answer5 == "C") { $totalC = $totalC + 1.1; $reponse5 = "La Box Lead : elle vous permet d’acquérir de nouveaux contacts dans votre region"; }
 
 				if ($totalA > $totalB && $totalA > $totalC) {
-					$personalite = 'Le Partner Cloud';
+					$personalite = 'Le Partner Mobilité';
+					$personaliteA = $personalite;
 				}
 				elseif ($totalB > $totalA && $totalB > $totalC) {
 					$personalite = 'Le Partner Expert';
+					$personaliteB = $personalite;
 				}
 				elseif ($totalC > $totalA && $totalC > $totalB) {
 					$personalite = 'Le Business Partner';
+					$personaliteC = $personalite;
 				}				
 
 
@@ -92,9 +98,9 @@
 				extract($_SESSION['post']); // Function to extract array.
 		
 				$sql="INSERT INTO `personalite` 
-					(nom, prenom, societe, email, telephone, q1, q2, q3, q4, q5, personalite, reponse1, reponse2, reponse3, reponse4, reponse5, reg_datetime)
+					(nom, prenom, societe, email, telephone, revendeur, q1, q2, q3, q4, q5, personalite, reponse1, reponse2, reponse3, reponse4, reponse5, reg_datetime)
 				VALUES 
-					('$nom', '$prenom', '$societe', '$email', '$telephone', '$q1', '$q2', '$q3', '$q4', '$q5', '$personalite', '$reponse1', '$reponse2', '$reponse3', '$reponse4', '$reponse5', NOW() )";
+					('$nom', '$prenom', '$societe', '$email', '$telephone', '$revendeur', '$q1', '$q2', '$q3', '$q4', '$q5', '$personalite', '$reponse1', '$reponse2', '$reponse3', '$reponse4', '$reponse5', NOW() )";
 
 				//-----------------------------------------------
 				// On execute la insertion
@@ -111,31 +117,47 @@
 
 		<div class="container">
 
-			<div class="fs-form-wrap" id="fs-form-wrap">
-				<div class="fs-title">
-					<?php if ($req_personnalite) { 
+			<!-- header -->
+			<header class="site-header" role="banner">
+				<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+			</header>
 
-						if ($totalA > $totalB && $totalA > $totalC) {
-							echo '<h1>Le Partner Cloud</h1>';
-						}
-						elseif ($totalB > $totalA && $totalB > $totalC) {
-							echo '<h1>Le Partner Expert</h1>';
-						}
-						elseif ($totalC > $totalA && $totalC > $totalB) {
-							echo '<h1>Le Business Partner</h1>';
-						}
-						?>
+			<div class="wrapper">
 
-						<a href="index.php">Recommencer le test</a>
-					<?php } else { ?>
-						<h1>Houston, we have a problem ! <br>
-							Ouuppps! Nous sommes desolés, quelque chose de bizarre c'est arrivé!</h1>
-
-						<a href="index.php">Recommencer le test</a>
-					<?php } ?>
-					<?php unset($_SESSION['post']); ?>
+				<div class="block-profil">
+					<h1>Quel Partner êtes-vous ? </h1><!--
+					--><div class="icon-profil icon-profil-mobilite <?php if ( $personaliteA ) {} ?>">Le Partner Mobilité</div><!--
+					--><div class="icon-profil icon-profil-expert <?php if ( $personaliteB ) {} ?>">Le Partner Expert</div><!--
+					--><div class="icon-profil icon-profil-partner <?php if ( $personaliteC ) {} ?>"">Le Business Partner</div>
 				</div>
-			</div><!-- /fs-form-wrap -->
+
+				<div class="fs-form-wrap" id="fs-form-wrap">
+					<div class="fs-title">
+						<?php if ($req_personnalite) { 
+
+							if ( $personaliteA ) {
+								echo '<h1>Le Partner Mobilité</h1>';
+							}
+							elseif ( $personaliteB ) {
+								echo '<h1>Le Partner Expert</h1>';
+							}
+							elseif ( $personaliteC ) {
+								echo '<h1>Le Business Partner</h1>';
+							}
+							?>
+
+							<a href="index.php">Recommencer le test</a>
+						<?php } else { ?>
+							<h1>Houston, we have a problem ! <br>
+								Ouuppps! Nous sommes desolés, quelque chose de bizarre c'est arrivé!</h1>
+
+							<a href="index.php">Recommencer le test</a>
+						<?php } ?>
+						<?php //unset($_SESSION['post']); ?>
+					</div>
+				</div><!-- /fs-form-wrap -->
+
+			</div><!-- wrapper -->
 
 		</div><!-- /container -->
 

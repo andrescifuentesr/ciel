@@ -6,6 +6,7 @@ $().ready(function() {
 			prenom: "required",
 			societe: "required",
 			telephone: "required",
+			revendeur: "required",
 			email: {
 				required: true,
 				email: true
@@ -16,7 +17,8 @@ $().ready(function() {
 			prenom: "Votre prénom, s'il vous plaît",
 			societe: "Votre prénom, s'il vous plaît",
 			telephone: "Votre téléphone, s'il vous plaît",
-			email: "Une adresse mail valide, s'il vous plaît"
+			email: "Une adresse mail valide, s'il vous plaît",
+			revendeur: "Est-ce que vous êtes déjà avec nous ?"
 		}
 	});
 });

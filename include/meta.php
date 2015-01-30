@@ -16,5 +16,6 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 		<link rel="stylesheet" href="css/build/prefixed/global.css">
+		<!-- <link rel="stylesheet" href="css/build/global.css"> -->
 		<script src="js/libs/modernizr.custom.js"></script>
 	</head>

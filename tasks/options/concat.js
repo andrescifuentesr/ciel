@@ -5,7 +5,7 @@ module.exports = {
       'js/libs/jquery.validate.js',
       'js/libs/classie.js',
       'js/libs/fullscreenForm.js',
-      'js/libs/selectFx.js',
+      // 'js/libs/selectFx.js',
       'js/main.js'
     ],
     dest: 'js/build/production.js'

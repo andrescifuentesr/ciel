@@ -3,32 +3,17 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	color: #fff;
 }
 
 .overview .fs-form-wrap {
 	height: auto;
 }
 
-/* Title */
-.fs-title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 40px;
-	width: 100%;
-}
-
-.fs-title h1 {
-	margin: 0;
-}
-
 /* Form */
 .fs-form {
 	position: relative;
 	text-align: left;
-	font-size: 2.5em;
+	// font-size: 2.5em;
 }
 
 .no-js .fs-form {
@@ -37,30 +22,31 @@
 
 /* Views (fullscreen and overview)*/
 .fs-form-full {
-	top: 32%;
+	// top: 32%;
 	margin: 0 auto;
-	width: 70%;
+	// width: 70%;
 }
 
 .fs-form-full,
 .fs-message-error {
-	max-width: 960px;
+	// max-width: 960px;
 }
 
 .fs-form-overview {
-	padding: 2.5em 30% 6em;
+	// padding: 2.5em 30% 6em;
+	padding: 0 0 4em;
 	width: 100%;
 	height: 100%;
-	background: #fffed8;
+	// background: #fffed8;
 	color: #3b3f45;
 	font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
 	display: block;
-	margin-bottom: 2.5em;
+	margin: 1em 0;
 	color: #3b3f45;
-	content: 'Review & Submit';
+	content: 'Review & Envoyer';
 	font-weight: 700;
 	font-size: 1.85em;
 }
@@ -120,7 +106,7 @@ button.fs-continue,
 }
 
 .fs-form-wrap button[disabled] {
-	opacity: 0.3;
+	// opacity: 0.3;
 	pointer-events: none;
 }
 
@@ -138,9 +124,9 @@ button.fs-continue,
 .fs-fields {
 	position: relative;
 	margin: 0 auto;
-	padding: 0;
 	top: 0;
 	list-style: none;
+	margin-left: 10%;
 }
 
 .fs-form-overview ol {
@@ -161,72 +147,51 @@ button.fs-continue,
 
 .js .fs-form-full .fs-fields > li {
 	position: absolute;
-	width: 100%;
+	width: 80%;
 }
 
 .fs-form-overview .fs-fields > li,
 .no-js .fs-form .fs-fields > li {
 	margin: 1em 0 2em;
-	padding: 0 0 2em 0;
-	border-bottom: 2px solid rgba(0,0,0,0.1);
+	padding: 0 10% 2em 0;
+	// border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
-/* Labels & info */
-.fs-fields > li label {
+
+
+//====================================
+// labels
+//====================================
+
+.fs-field-label {
 	position: relative;
-}
-
-.fs-fields > li label.fs-field-label {
-	display: inline-block;
-	padding: 0 5px 1em 0;
-	font-weight: 700;
+	display: block;
 	pointer-events: none;
-}
+	border-bottom: 1px solid #232629;
+	margin: 2em 0 1em;
+	padding-bottom: 1em;
+	font-family: 'ralewayextrabold';
+	font-weight: normal;
+	@include font-size(30px);
 
-.fs-form-full .fs-fields > li label[data-info]::after {
-	position: relative;
-	display: inline-block;
-	margin-left: 10px;
-	width: 24px;
-	height: 24px;
-	border: 2px solid rgba(0,0,0,0.4);
-	color: rgba(0,0,0,0.4);
-	border-radius: 50%;
-	content: 'i';
-	vertical-align: top;
-	text-align: center;
-	font-weight: 700;
-	font-style: italic;
-	font-size: 14px;
-	font-family: Georgia, serif;
-	line-height: 20px;
-	cursor: pointer;
-	pointer-events: auto;
-}
+	.first-letter {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 18%;
+		color: $color-blue;
+		font-family:  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 700;
+		line-height: .8;
+		@include font-size(172px);
+	}
 
-.fs-form-full .fs-fields > li label[data-info]::before {
-    position: absolute;
-    bottom: 100%;
-   	left: 0;
-    padding: 0 0 10px;
-    min-width: 200px;
-	content: attr(data-info);
-	font-size: 0.4em;
-	color: #6a7b7e;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-    -webkit-transform: translate3d(0,-5px,0);
-    transform: translate3d(0,-5px,0);
-    pointer-events: none;
+	.question {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 70%;
+	}
 }
-
-.fs-form-full .fs-fields > li label[data-info]:hover::before {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
+//???????
 .fs-form-full .fs-fields > li label:hover ~ .fs-info,
 .fs-form-full .fs-fields > li .fs-info:hover {
 	opacity: 1;
@@ -234,56 +199,17 @@ button.fs-continue,
 	transform: translateY(0);
 	pointer-events: auto;
 }
+//???????
 
-/* Inputs */
-.fs-fields input {
-	display: block;
-	margin: 0;
-	padding: 0 0 0.15em;
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid rgba(0,0,0,0.2);
-	background-color: transparent;
-	color: #fffed8;
-	text-overflow: ellipsis;
-	font-weight: bold;
-	font-size: 1.5em;
-	border-radius: 0;
-}
 
-.fs-fields input:invalid {
-	box-shadow: none; /* removes red shadow in FF*/
-}
-
-.fs-form-overview .fs-fields input {
-	border-bottom-color: transparent;
-	color: rgba(0,0,0,0.5);
-}
-
-.fs-fields [required] {
-	background-image: url(../img/abacusstar.svg);
-	background-position: top right;
-	background-size: 18px;
-	background-repeat: no-repeat;
-}
-
-.fs-fields input:focus {
-	background-color: #3b3f45; /* Fixes chrome bug with placeholder */
-}
-
-.fs-form-overview .fs-fields input:focus {
-	background-color: #fffed8; /* Fixes chrome bug with placeholder */
-}
-
-.fs-form-overview .fs-fields input {
-	font-size: 1.2em;
-}
-
+//====================================
+// radio buttons
+//====================================
 .fs-fields .fs-radio-custom input[type="radio"] {
 	position: absolute;
 	display: block;
-	margin: 30px auto 20px;
-	margin: 0 auto 20px;
+	// margin: 30px auto 20px;
+	// margin: 0 auto 20px;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
@@ -291,143 +217,73 @@ button.fs-continue,
 }
 
 .fs-fields > li .fs-radio-custom span {
-	float: left;
+	// float: left;
+	display:block;
 	position: relative;
 	margin-right: 3%;
 	padding: 10px;
-	max-width: 200px;
-	width: 30%;
-	text-align: center;
-	font-weight: 700;
-	font-size: 50%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// max-width: 200px;
+	width: 100%;
+	text-align: left;
+	font-family: 'ralewaybold', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	@include font-size(32px);
 }
 
 .fs-fields > li .fs-radio-custom span label {
-	color: rgba(0,0,0,0.4);
+	padding-left: 4.5em;
+	display:block;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
 .fs-form-overview .fs-fields > li .fs-radio-custom span {
-	max-width: 140px;
+	// max-width: 140px;
 }
 
 .fs-form-overview .fs-fields > li .fs-radio-custom span {
 	font-size: 75%;
 }
 
+.fs-form-overview .fs-field-label .first-letter {
+	width: auto;
+	line-height: 1;
+	@include font-size(80px);
+}
+
 .fs-fields > li .fs-radio-custom label {
-	display: block;
-	padding-top: 100%;
+	// display: block;
+	// padding-top: 100%;
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 	cursor: pointer;
 }
 
-.fs-fields .fs-radio-custom label::after {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	background-position: 50% 0%;
-	background-size: 85%;
-	background-repeat: no-repeat;
-	content: '';
-	opacity: 0.5;
-	-webkit-transition: opacity 0.2s;
-	transition: opacity 0.2s;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+.fs-fields .fs-radio-custom label::before {
+	content:"";
+	background: $color-gris;
+	width:1em;
+	height: 1em;
+	display: block;
+	float: left;
+	margin-left: -1.7em;
+	margin-top: .1em;
 }
 
-.fs-fields .fs-radio-custom label.radio-mobile::after {
-	background-image: url(../img/mobile.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-social::after {
-	background-image: url(../img/social.svg);
-}
-
-.fs-fields .fs-radio-custom label.radio-conversion::after {
-	background-image: url(../img/conversion.svg);
-}
-
-.fs-fields .fs-radio-custom label:hover::after,
-.fs-fields input[type="radio"]:focus + label::after,
-.fs-fields input[type="radio"]:checked + label::after {
-	opacity: 1;
+.fs-fields .fs-radio-custom label:hover::before,
+.fs-fields input[type="radio"]:focus + label::before,
+.fs-fields input[type="radio"]:checked + label::before {
+	background: $color-blue;
 }
 
 .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: #fffed8;
+	color: $color-blue;
 }
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
 	color: rgba(0,0,0,0.8);
 }
 
-.fs-fields textarea {
-	padding: 0.25em;
-	width: 100%;
-	height: 200px;
-	border: 2px solid rgba(0,0,0,0.2);
-	background-color: transparent;
-	color: #fffed8;
-	font-weight: 700;
-	font-size: 0.85em;
-	resize: none;
-}
-
-.fs-form-overview .fs-fields textarea {
-	height: 100px;
-	color: rgba(0,0,0,0.5);
-}
-
-.fs-fields textarea:focus {
-	outline: none;
-}
-
-.fs-form-overview .fs-fields textarea {
-	padding: 0;
-	border-color: transparent;
-}
-
-.fs-form-overview .fs-fields textarea:focus {
-	background: #fffed8;
-}
-
-.fs-form div.cs-select.cs-skin-boxes {
-	display: block;
-}
-
-.fs-form-overview .cs-skin-boxes > span {
-	border-radius: 5px;
-	width: 90px;
-	height: 70px;
-	font-size: 0.8em;
-}
-
-.fs-form-overview .cs-skin-boxes > span::before {
-	padding-top: 50px;
-	box-shadow: 0 20px 0 #292c30, inset 0 -5px #292c30;
-}
-
-.fs-fields input.fs-mark {
-	padding-left: 1em;
-	background-image: url(../img/dollar.svg);
-	background-position: 0% 0.15em;
-	background-size: auto 75%;
-	background-repeat: no-repeat;
-}
-
-.fs-fields input.fs-mark[required] {
-	background-image: url(../img/dollar.svg), url(../img/abacusstar.svg);
-	background-position: 0% 0.15em, top right;
-	background-size: auto 75%, 18px;
-	background-repeat: no-repeat;
-}
 
 /* placeholder */
 .fs-fields input::-webkit-input-placeholder,
@@ -486,7 +342,7 @@ button.fs-continue,
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-color: rgba(0,0,0,0.5);
+	background-color: $color-gris;
 	content: '';
 	text-indent: 0;
 	-webkit-backface-visibility: hidden;
@@ -494,7 +350,7 @@ button.fs-continue,
 }
 
 .fs-nav-dots button::after {
-	background-color: rgba(0,0,0,0.4);
+	background-color: $color-gris;
 	-webkit-transform: perspective(1000px) rotate3d(0,1,0,180deg);
 	transform: perspective(1000px) rotate3d(0,1,0,180deg);
 }
@@ -506,7 +362,7 @@ button.fs-continue,
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-	background: #fffed8;
+	background: $color-blue;
 }
 
 /* Progress bar */
@@ -523,10 +379,10 @@ button.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: 0;
+	top: 0.5em;
 	right: 0;
 	overflow: hidden;
-	color: rgba(0,0,0,0.4);
+	// color: rgba(0,0,0,0.4);
 	margin: 40px;
 	width: 2em;
 	font-weight: 700;
@@ -629,13 +485,14 @@ button.fs-continue {
 	border: 3px solid #232529;
 	border-radius: 40px;
 	font-weight: 700;
-	color: rgba(0,0,0,0.4);
+	// color: rgba(0,0,0,0.4);
 }
 
 .fs-form-overview .fs-submit,
 .no-js .fs-form .fs-submit  {
 	display: block;
 	float: right;
+	margin-right: 2em;
 }
 
 .fs-form-overview .fs-submit {
@@ -647,7 +504,7 @@ button.fs-continue {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	margin: 0 40px 60px 0;
+	margin: 0 60px 60px 0;
 	font-size: 1.25em;
 }
 
@@ -658,19 +515,6 @@ button.fs-continue:hover {
 	color: #fff;
 }
 
-.fs-continue::after {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	line-height: 3;
-	text-align: center;
-	background: transparent;
-	color: rgba(0,0,0,0.3);
-	content: 'or press ENTER';
-	font-size: 0.65em;
-	pointer-events: none;
-}
 
 /* Error message */
 .fs-message-error {

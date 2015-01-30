@@ -115,7 +115,7 @@
 		this.ctrls = createElement( 'div', { cName : 'fs-controls', appendTo : this.el } );
 
 		// continue button (jump to next field)
-		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
+		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continuer', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots
@@ -451,7 +451,7 @@
 		var message = '';
 		switch( err ) {
 			case 'NOVAL' : 
-				message = 'Please fill the field before continuing';
+				message = 'Sélectionnez une réponse';
 				break;
 			case 'INVALIDEMAIL' : 
 				message = 'Please fill a valid email address';

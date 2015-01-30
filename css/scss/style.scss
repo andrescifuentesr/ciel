@@ -3,13 +3,11 @@
 @import 'structure/mixins';
 // @import 'structure/grid';
 @import 'structure/normalize';
-@import 'structure/typography';
 
 // inc
-@import 'inc/demo';
 @import 'inc/component';
-@import 'inc/cs-select';
-@import 'inc/cs-skin-boxes';
+// @import 'inc/cs-select';
+// @import 'inc/cs-skin-boxes';
 
 
 //theme
@@ -22,25 +20,33 @@
   @include box-sizing(border-box);
 }
 
-html {
-	@if $custom-font-family {
-		font: $font-weight #{$font-size}%/#{$line-height} $custom-font-family, $font-family;
-	} @else {
-		font: $font-weight #{$font-size}%/#{$line-height} $font-family;
-	}
+html, body, .container {
+	height: 100%;
 }
 
 body {
-	// Ala Trent Walton
-	color: #000;
+	background: #d5d5d5;
+	color: #32363b;
+	overflow: hidden;
+	overflow-y: scroll;
+	min-height: 590px;
 }
 
 a {
-	text-decoration:none;
+	color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'ralewaymedium';
+a:hover, a:focus {
+	color: #fff;
+}
+
+h1 {
+	font-family: 'ralewayextrabold';
+	font-weight: normal;
+	font-style: normal;
+	@include font-size(35px);
 }
 
 
