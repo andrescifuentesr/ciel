@@ -18,7 +18,7 @@
 					<h1>Quel Partner êtes-vous ? </h1><!--
 					--><div class="icon-profil icon-profil-mobilite">Le Partner Mobilité</div><!--
 					--><div class="icon-profil icon-profil-expert">Le Partner Expert</div><!--
-					--><div class="icon-profil icon-profil-partner">Le Business Partner</div>
+					--><div class="icon-profil icon-profil-partner">Le Partner Chasseur</div>
 				</div>
 
 				<div class="fs-form-wrap" id="fs-form-wrap">
@@ -37,7 +37,7 @@
 
 						<div class="form-label-item">
 							<label for="societe" class="label-hidden">Adresse :</label>
-							<input type="text" name="societe" id="societe" placeholder="Societe">
+							<input type="text" name="societe" id="societe" placeholder="Société">
 						</div>
 
 						<div class="form-label-item">
@@ -51,6 +51,7 @@
 						</div>
 
 						<div class="form-label-item form-label-item--last">
+							<label for="revendeur" class="error" >Est-ce que vous êtes déjà avec nous ?</label>
 							<label for="revendeur" class="label-item--last">Je suis déjà revendeur Ciel</label><!--
 							--><label for="revendeur-oui" class="label-item--radio">Oui</label><!--
 							--><input type="radio" name="revendeur" id="revendeur-oui" value="Oui" /><!--

@@ -46,6 +46,17 @@
 	}
 }
 
+.block-profil--final {
+
+	.icon-profil {
+		opacity: 0.15;
+	}
+
+	.icon-profil--active {
+		opacity: 1;
+	}
+}  
+
 .icon-profil-mobilite {
 
 	&::before {
@@ -75,6 +86,7 @@
 	width:50%;
 	float: left;
 	margin: 1em 0;
+	position: relative;
 	@include clear();
 
 	.label-hidden {
@@ -83,7 +95,7 @@
 
 	input[type="text"],
 	input[type="email"],
-	input[type="tel"] {
+	input[type="tel"], {
 		border: 1px solid #646464;
 		padding: .5em 0 .5em 1em;
 		width: 80%;
@@ -91,6 +103,18 @@
 		box-shadow: none;
 	}
 
+	label.error //Validate.je
+	 {
+		width: 90%;
+		box-shadow: none;
+		color: #eb7e7f;
+		font-size: 1em;
+		display: block;
+		position: absolute;
+		top: 2.7em;
+		left:10%;
+		display: none;
+	}
 }
 
 .form-label-item--last {

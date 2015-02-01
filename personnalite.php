@@ -84,7 +84,7 @@
 					$personaliteB = $personalite;
 				}
 				elseif ($totalC > $totalA && $totalC > $totalB) {
-					$personalite = 'Le Business Partner';
+					$personalite = 'Le Partner Chasseur';
 					$personaliteC = $personalite;
 				}				
 
@@ -124,11 +124,11 @@
 
 			<div class="wrapper">
 
-				<div class="block-profil">
-					<h1>Quel Partner êtes-vous ? </h1><!--
-					--><div class="icon-profil icon-profil-mobilite <?php if ( $personaliteA ) {} ?>">Le Partner Mobilité</div><!--
-					--><div class="icon-profil icon-profil-expert <?php if ( $personaliteB ) {} ?>">Le Partner Expert</div><!--
-					--><div class="icon-profil icon-profil-partner <?php if ( $personaliteC ) {} ?>"">Le Business Partner</div>
+				<div class="block-profil block-profil--final">
+					<h1>Vous êtes : </h1><!--
+					--><div class="icon-profil icon-profil-mobilite <?php if ( $personaliteA ) { echo 'icon-profil--active'; } ?>">Le Partner Mobilité</div><!--
+					--><div class="icon-profil icon-profil-expert <?php if ( $personaliteB ) { echo 'icon-profil--active'; } ?>">Le Partner Expert</div><!--
+					--><div class="icon-profil icon-profil-partner <?php if ( $personaliteC ) { echo 'icon-profil--active'; } ?>">Le Partner Chasseur</div>
 				</div>
 
 				<div class="fs-form-wrap" id="fs-form-wrap">
@@ -136,24 +136,24 @@
 						<?php if ($req_personnalite) { 
 
 							if ( $personaliteA ) {
-								echo '<h1>Le Partner Mobilité</h1>';
+								echo '<h2>Friant de nouvelles technologies, vous savez vous adapter aux nouveaux des clients qui demandent de plus en plus de mobilité, de souplesse et de sécurité.</h2>';
 							}
 							elseif ( $personaliteB ) {
-								echo '<h1>Le Partner Expert</h1>';
+								echo '<h2>Véritable technicien, vous cherchez toujours à être le plus qualifié pour pouvoir accompagner au mieux vos clients. Vous avez le profil pour assurer l’assistance directement à vos clients</h2>';
 							}
 							elseif ( $personaliteC ) {
-								echo '<h1>Le Business Partner</h1>';
+								echo '<h2>Commercial dans l’âme, vous êtes sans cesse en quête de nouveaux pour développer votre activité.</h2>';
 							}
 							?>
 
-							<a href="index.php">Recommencer le test</a>
+							<a href="index.php" class="fs-user-info" >Reprendre le test</a>
 						<?php } else { ?>
 							<h1>Houston, we have a problem ! <br>
 								Ouuppps! Nous sommes desolés, quelque chose de bizarre c'est arrivé!</h1>
 
-							<a href="index.php">Recommencer le test</a>
+							<a href="index.php" class="fs-user-info" >Reprendre le test</a>
 						<?php } ?>
-						<?php //unset($_SESSION['post']); ?>
+						<?php unset($_SESSION['post']); ?>
 					</div>
 				</div><!-- /fs-form-wrap -->
 

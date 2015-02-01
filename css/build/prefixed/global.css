@@ -1000,9 +1000,10 @@ button.fs-continue,
 /* Continue button and submit button */
 button.fs-submit,
 button.fs-user-info,
+a.fs-user-info,
 button.fs-continue {
   padding: 0.6em 1.5em;
-  border: 3px solid #232529;
+  border: 3px solid #32363b;
   border-radius: 40px;
   font-weight: 700;
 }
@@ -1308,6 +1309,13 @@ input[type=text]::-ms-clear {
   display: block;
 }
 
+.block-profil--final .icon-profil {
+  opacity: 0.15;
+}
+.block-profil--final .icon-profil--active {
+  opacity: 1;
+}
+
 .icon-profil-mobilite::before {
   background: url("../../../img/icon-profile-mobilite.svg") center center;
 }
@@ -1328,6 +1336,7 @@ input[type=text]::-ms-clear {
   width: 50%;
   float: left;
   margin: 1em 0;
+  position: relative;
 }
 .form-label-item {
   *zoom: 1;
@@ -1350,6 +1359,17 @@ input[type=text]::-ms-clear {
   width: 80%;
   margin: 0 10%;
   box-shadow: none;
+}
+.form-label-item label.error {
+  width: 90%;
+  box-shadow: none;
+  color: #eb7e7f;
+  font-size: 1em;
+  display: block;
+  position: absolute;
+  top: 2.7em;
+  left: 10%;
+  display: none;
 }
 
 .form-label-item--last {
@@ -1479,7 +1499,7 @@ body {
 }
 
 a {
-  color: rgba(0, 0, 0, 0.3);
+  color: #32363b;
   text-decoration: none;
   outline: none;
 }
@@ -1494,6 +1514,15 @@ h1 {
   font-style: normal;
   font-size: 35px;
   font-size: 1.94444rem;
+}
+
+h2 {
+  font-family: 'ralewaybold';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4;
+  font-size: 32px;
+  font-size: 1.77778rem;
 }
 
 /* ========= Helperclass =========== */

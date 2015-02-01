@@ -33,7 +33,7 @@ body {
 }
 
 a {
-	color: rgba(0,0,0,0.3);
+	color: #32363b;
 	text-decoration: none;
 	outline: none;
 }
@@ -47,6 +47,14 @@ h1 {
 	font-weight: normal;
 	font-style: normal;
 	@include font-size(35px);
+}
+
+h2 {
+	font-family: 'ralewaybold';
+	font-weight: normal;
+	font-style: normal;
+	line-height:1.4;
+	@include font-size(32px);
 }
 
 
