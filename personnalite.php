@@ -119,7 +119,9 @@
 
 			<!-- header -->
 			<header class="site-header" role="banner">
-				<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+				<a href="index.php">
+					<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+				</a>
 			</header>
 
 			<div class="wrapper">
@@ -136,22 +138,37 @@
 						<?php if ($req_personnalite) { 
 
 							if ( $personaliteA ) {
-								echo '<h2>Friant de nouvelles technologies, vous savez vous adapter aux nouveaux des clients qui demandent de plus en plus de mobilité, de souplesse et de sécurité.</h2>';
+								echo '<h2>Friant de nouvelles technologies, vous savez vous adapter aux nouveaux des clients qui demandent de plus en plus de mobilité, de souplesse et de sécurité.</h2>
+									<p>&#10145; Proposez à vos clients les offres Flexibilité de Ciel : 2 niveaux d’abonnement mensuels sans engagement (logiciel + service) : Extraflex et Ultraflex. Ce dernier niveau inclus les offres mobiles de Ciel : Ciel Données Mobiles pour gérer à distance  et de manière sécurisée son activité comptable et commerciale et Ciel Business Mobiles pour piloter son activité à distance.</p>
+									<p>&#10145; Vous êtes Partenaire Certifié Ciel, proposez ces abonnements avec le service Centre Partenaire Ciel, réservé aux Partenaires Certifiés. Vous délivrez ainsi votre propre service d’assistance  ainsi que vos prestations à valeurs ajoutées. Vous êtes rémunérés tout au long de son abonnement et réabonnement : vous augmentez vos marges ! </p>
+									<p>&#10145; Vous n’êtes pas encore Partenaire Certifié Ciel ? </p>
+									<ul>
+										<li>Proposez les offres flexibilité en mode apporteur d’affaires. Ciel vous verse une prime la 1ere année d’abonnement de votre client et ceci à chaque nouvelle vente. </li>
+										<li>Envie de vous certifier ? Des cessions sont organisées tous les mois, renseignez-vous auprès de l’un de nos conseilleurs commercial.</li>
+									</ul>';
 							}
 							elseif ( $personaliteB ) {
-								echo '<h2>Véritable technicien, vous cherchez toujours à être le plus qualifié pour pouvoir accompagner au mieux vos clients. Vous avez le profil pour assurer l’assistance directement à vos clients</h2>';
+								echo '<h2>Véritable technicien, vous cherchez toujours à être le plus qualifié pour pouvoir accompagner au mieux vos clients. Vous avez le profil pour assurer l’assistance directement à vos clients</h2>
+									<p>&#10145; Proposez à vos clients les offres Flexibilité de Ciel : 2 niveaux d’abonnements mensuels sans engagement (logiciel + service) le service Centre Partenaire Ciel, réservé aux partenaires. Vous délivrez ainsi votre propre service d’assistance  ainsi que vos prestations à valeurs ajoutées. Vous êtes rémunérés tout au long de son abonnement et réabonnement : vous augmentez vos marges !</p>
+									<p>&#10145; Vous n’êtes pas encore Partenaire Certifié Ciel ? </p>
+									<ul>
+										<li>Proposez les offres flexibilité en mode apporteur d’affaires. Ciel vous verse une prime la 1ere année d’abonnement de votre client et ce à chaque nouvelle vente.</li>
+										<li>Envie de vous certifier ? Des cessions sont organisées tous les mois, renseignez-vous auprès de l’un de nos conseilleurs commercial.</li>
+									</ul>';
 							}
 							elseif ( $personaliteC ) {
-								echo '<h2>Commercial dans l’âme, vous êtes sans cesse en quête de nouveaux pour développer votre activité.</h2>';
+								echo '<h2>Commercial dans l’âme, vous êtes sans cesse en quête de nouveaux contacts pour développer votre activité.</h2>
+									<p>&#10145; Proposez à vos clients les offres Flexibilité de Ciel : 2 niveaux d’abonnements mensuels sans engagement (logiciel + service), en mode apporteur d’affaires. Ciel vous verse une prime la 1ere année d’abonnement de votre client et ceci à chaque nouvelle vente</p>
+									<p>&#10145; Vous souhaitez augmenter davantage vos marges ? Devenez Partenaire Certifié Ciel et proposez votre propre assistance avec le Service Centre partenaire. Des cessions sont organisées tous les mois, renseignez-vous auprès de l’un de nos conseilleurs commercial.</p>';
 							}
 							?>
 
-							<a href="index.php" class="fs-user-info" >Reprendre le test</a>
+							<a href="index.php" class="fs-user-info fs-user-info--final" >Reprendre le test</a>
 						<?php } else { ?>
 							<h1>Houston, we have a problem ! <br>
 								Ouuppps! Nous sommes desolés, quelque chose de bizarre c'est arrivé!</h1>
 
-							<a href="index.php" class="fs-user-info" >Reprendre le test</a>
+							<a href="index.php" class="fs-user-info fs-user-info--final" >Reprendre le test</a>
 						<?php } ?>
 						<?php unset($_SESSION['post']); ?>
 					</div>

@@ -233,6 +233,9 @@
 
 		// check if on last step
 		this.isLastStep = this.current === this.fieldsCount - 1 && backto === undefined ? true : false;
+
+		//pre last step?
+		// this.isPreLastStep = this.current === this.fieldsCount - 2 ? alert('yes') : alert('no');
 		
 		// clear any previous error messages
 		this._clearError();

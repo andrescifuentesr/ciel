@@ -124,9 +124,10 @@ button.fs-continue,
 .fs-fields {
 	position: relative;
 	margin: 0 auto;
+	padding:0;
 	top: 0;
 	list-style: none;
-	margin-left: 10%;
+	margin-left: 7.5%;
 }
 
 .fs-form-overview ol {
@@ -147,7 +148,7 @@ button.fs-continue,
 
 .js .fs-form-full .fs-fields > li {
 	position: absolute;
-	width: 80%;
+	width: 85%;
 }
 
 .fs-form-overview .fs-fields > li,
@@ -168,7 +169,7 @@ button.fs-continue,
 	display: block;
 	pointer-events: none;
 	border-bottom: 1px solid #232629;
-	margin: 2em 0 1em;
+	margin: 1.5em 0 1em;
 	padding-bottom: 1em;
 	font-family: 'ralewayextrabold';
 	font-weight: normal;
@@ -371,7 +372,7 @@ button.fs-continue,
 	top: 0;
 	width: 0%;
 	height: 0.5em;
-	background: #fffed8;
+	background: #ffffff;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }
@@ -379,7 +380,7 @@ button.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: 0.5em;
+	top: 0;
 	right: 0;
 	overflow: hidden;
 	// color: rgba(0,0,0,0.4);
@@ -520,7 +521,7 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
 	position: absolute;
-	bottom: 75%;
+	bottom: 80%;
 	left: 50%;
 	z-index: 800;
 	max-width: 960px;
@@ -650,24 +651,42 @@ input[type=text]::-ms-clear {
 		min-height: 500px;
 	}
 
+	.site-header {
+		height: 80px;
+	}
+
 	.fs-form-wrap {
 		font-size: 70%;
 	}
 
 	.fs-form {
-		top: 6em;
-		right: 2em;
-		left: 0;
-		padding: 0 3.75em 0 1em;
+		// top: 6em;
+		// right: 2em;
+		// left: 0;
+		// padding: 0 3.75em 0 1em;
 		width: auto;
 		font-size: 2em;
 	}
 
-	.fs-form.fs-form-overview {
-		top: 0;
-		right: 0;
-		padding: 1.5em 1em 8em 1em;
-		font-size: 1.5em;
+	.fs-field-label {
+		
+		.first-letter {
+			width: auto;
+			line-height: 1;
+			@include font-size(60px);
+		}
+	}
+
+	.fs-fields > li .fs-radio-custom span label {
+		padding-left: 2.5em;
+	}
+
+	.fs-field-label {
+		@include font-size(36px);
+	}
+
+	.fs-fields > li .fs-radio-custom span {
+		@include font-size(24px);
 	}
 
 	.fs-title {

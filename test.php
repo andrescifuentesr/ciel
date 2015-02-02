@@ -34,9 +34,10 @@
 
 				<form id="form-user-test" class="fs-form fs-form-full" method="post" action="personnalite.php" autocomplete="off" >
 
-					<!-- header -->
 					<header class="site-header" role="banner">
-						<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+						<a href="index.php">
+							<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+						</a>
 					</header>
 
 					<ol class="fs-fields">

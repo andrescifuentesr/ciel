@@ -651,9 +651,10 @@ button.fs-continue,
 .fs-fields {
   position: relative;
   margin: 0 auto;
+  padding: 0;
   top: 0;
   list-style: none;
-  margin-left: 10%;
+  margin-left: 7.5%;
 }
 
 .fs-fields > li {
@@ -670,7 +671,7 @@ button.fs-continue,
 
 .js .fs-form-full .fs-fields > li {
   position: absolute;
-  width: 80%;
+  width: 85%;
 }
 
 .fs-form-overview .fs-fields > li,
@@ -684,7 +685,7 @@ button.fs-continue,
   display: block;
   pointer-events: none;
   border-bottom: 1px solid #232629;
-  margin: 2em 0 1em;
+  margin: 1.5em 0 1em;
   padding-bottom: 1em;
   font-family: 'ralewayextrabold';
   font-weight: normal;
@@ -872,7 +873,7 @@ button.fs-continue,
   top: 0;
   width: 0%;
   height: 0.5em;
-  background: #fffed8;
+  background: #ffffff;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
@@ -880,7 +881,7 @@ button.fs-continue,
 /* Number indicator */
 .fs-numbers {
   position: absolute;
-  top: 0.5em;
+  top: 0;
   right: 0;
   overflow: hidden;
   margin: 40px;
@@ -1040,7 +1041,7 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
   position: absolute;
-  bottom: 75%;
+  bottom: 80%;
   left: 50%;
   z-index: 800;
   max-width: 960px;
@@ -1190,24 +1191,38 @@ input[type=text]::-ms-clear {
     min-height: 500px;
   }
 
+  .site-header {
+    height: 80px;
+  }
+
   .fs-form-wrap {
     font-size: 70%;
   }
 
   .fs-form {
-    top: 6em;
-    right: 2em;
-    left: 0;
-    padding: 0 3.75em 0 1em;
     width: auto;
     font-size: 2em;
   }
 
-  .fs-form.fs-form-overview {
-    top: 0;
-    right: 0;
-    padding: 1.5em 1em 8em 1em;
-    font-size: 1.5em;
+  .fs-field-label .first-letter {
+    width: auto;
+    line-height: 1;
+    font-size: 60px;
+    font-size: 3.33333rem;
+  }
+
+  .fs-fields > li .fs-radio-custom span label {
+    padding-left: 2.5em;
+  }
+
+  .fs-field-label {
+    font-size: 36px;
+    font-size: 2rem;
+  }
+
+  .fs-fields > li .fs-radio-custom span {
+    font-size: 24px;
+    font-size: 1.33333rem;
   }
 
   .fs-title {
@@ -1271,7 +1286,7 @@ input[type=text]::-ms-clear {
 }
 .site-header {
   background: #fff;
-  height: 160px;
+  height: 120px;
   position: relative;
 }
 .site-header .site-logo {
@@ -1305,8 +1320,8 @@ input[type=text]::-ms-clear {
   content: '';
   background: #009ada;
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 1em;
   display: block;
 }
@@ -1337,7 +1352,7 @@ input[type=text]::-ms-clear {
 .form-label-item {
   width: 50%;
   float: left;
-  margin: 1em 0;
+  margin: 0.75em 0;
   position: relative;
 }
 .form-label-item {
@@ -1361,6 +1376,7 @@ input[type=text]::-ms-clear {
   width: 80%;
   margin: 0 10%;
   box-shadow: none;
+  border-radius: 0;
 }
 .form-label-item label.error {
   width: 90%;
@@ -1369,7 +1385,7 @@ input[type=text]::-ms-clear {
   font-size: 1em;
   display: block;
   position: absolute;
-  top: 2.7em;
+  top: 2.5em;
   left: 10%;
   display: none;
 }
@@ -1388,23 +1404,50 @@ input[type=text]::-ms-clear {
   font-size: 0.94444rem;
 }
 .form-label-item--last .label-item--radio {
-  width: 12.5%;
+  width: 25%;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+  position: relative;
+}
+.form-label-item--last .label-item--radio::after {
+  content: "";
+  border: 1px solid #646464;
+  background: #fff;
+  width: 1em;
+  height: 1em;
+  display: block;
+  float: right;
 }
 .form-label-item--last input[type="radio"] {
-  width: 12.5%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.form-label-item--last .label-item--radio:hover::before,
+.form-label-item--last input[type="radio"]:focus + label::after,
+.form-label-item--last input[type="radio"]:checked + label::after {
+  background: #008065;
+}
+.form-label-item--last input[type="radio"]:checked + .label-item--radio {
+  color: #008065;
 }
 
 .fs-user-info {
   position: absolute;
-  right: -20%;
+  right: -10%;
   bottom: -60px;
   font-size: 1.25em;
+}
+
+.fs-user-info--final {
+  position: static;
+  float: right;
+  margin-bottom: 40px;
+  display: block;
 }
 
 /* ==========================================================================
@@ -1492,6 +1535,9 @@ input[type=text]::-ms-clear {
 
 html, body, .container {
   height: 100%;
+  font-family: 'ralewaysemibold';
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -1516,6 +1562,7 @@ h1 {
   font-family: 'ralewayextrabold';
   font-weight: normal;
   font-style: normal;
+  margin: 0.3em 0 0.67em;
   font-size: 35px;
   font-size: 1.94444rem;
 }
@@ -1524,9 +1571,9 @@ h2 {
   font-family: 'ralewaybold';
   font-weight: normal;
   font-style: normal;
-  line-height: 1.4;
-  font-size: 32px;
-  font-size: 1.77778rem;
+  line-height: 1.3;
+  font-size: 24px;
+  font-size: 1.33333rem;
 }
 
 /* ========= Helperclass =========== */

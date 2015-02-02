@@ -15,7 +15,7 @@ $().ready(function() {
 		messages: {
 			nom: "Votre nom, s'il vous plaît",
 			prenom: "Votre prénom, s'il vous plaît",
-			societe: "Votre prénom, s'il vous plaît",
+			societe: "Votre Société, s'il vous plaît",
 			telephone: "Votre téléphone, s'il vous plaît",
 			email: "Une adresse mail valide, s'il vous plaît",
 			revendeur: "Est-ce que vous êtes déjà avec nous ?"

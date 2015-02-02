@@ -9,7 +9,9 @@
 
 			<!-- header -->
 			<header class="site-header" role="banner">
-				<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+				<a href="index.php">
+					<img src="img/logo-cial.svg" alt="logo TRouve ton Ciel" class="site-logo">
+				</a>
 			</header>
 
 			<div class="wrapper">
@@ -53,10 +55,10 @@
 						<div class="form-label-item form-label-item--last">
 							<label for="revendeur" class="error" >Est-ce que vous êtes déjà avec nous ?</label>
 							<label for="revendeur" class="label-item--last">Je suis déjà revendeur Ciel</label><!--
-							--><label for="revendeur-oui" class="label-item--radio">Oui</label><!--
 							--><input type="radio" name="revendeur" id="revendeur-oui" value="Oui" /><!--
-							--><label for="revendeur-non" class="label-item--radio">Non</label><!--
-							--><input type="radio" name="revendeur" id="revendeur-non" value="Non" />
+							--><label for="revendeur-oui" class="label-item--radio">Oui</label><!--
+							--><input type="radio" name="revendeur" id="revendeur-non" value="Non" /><!--
+							--><label for="revendeur-non" class="label-item--radio">Non</label>
 						</div>
 
 						<button class="fs-user-info" type="submit" value="submit">Commencer</button>
